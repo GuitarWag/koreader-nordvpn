@@ -12,3 +12,7 @@ Runs wireproxy with a NordLynx config and sets KOReader's HTTP proxy.
 Without `nordvpn.conf`, Network, NordVPN has an Access token dialog and a Country list. The conf file wins over the menu when both exist.
 
 On first connect the plugin downloads wireproxy, checks its sha256, asks Nord for a server in the country, and starts it. Only traffic that uses KOReader's HTTP proxy goes through Nord. Logs are in `bin/wireproxy.log`. `nordvpn.conf` holds your token, so git ignores it.
+
+## Install from the App Store
+
+Install the [App Store plugin](https://github.com/omer-faruq/appstore.koplugin). Open Tools, App Store, Plugins, and search for `nordvpn`. A manual install is the copy step above.
