@@ -1,0 +1,5 @@
+# Copy to nordvpn.conf in the same folder and fill it in.
+# token: Nord Account, NordVPN, Manual setup, Access token.
+# country: a name (Germany) or a code (DE).
+token = 
+country = Germany
