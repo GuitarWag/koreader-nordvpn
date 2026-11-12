@@ -66,10 +66,18 @@ While the VPN is on, KOReader's HTTP proxy is set to `127.0.0.1:25345`. Disconne
 
 ## Where your token is stored
 
-- `nordvpn.conf`, if you use Option A.
-- KOReader's `settings/nordvpn.lua`. It holds the token and the NordLynx key that Nord returns.
+The plugin keeps your token in plain text. It does not encrypt it. KOReader has no secure storage for plugins, and other plugins work the same way. The Z-Library plugin, for example, stores your account password in plain text.
 
-Both files are plain text. Anyone with USB access to the device can read them. If the device is lost, revoke the token in your Nord Account.
+- `nordvpn.conf` in the plugin folder, if you use Option A.
+- KOReader's `settings/nordvpn.lua`. It holds the token and the NordLynx key that Nord returns. The plugin needs the token to fetch a new key, so it keeps it.
+
+Anyone who can read the device storage can read both files. This includes any computer you connect with USB and any backup or sync tool that copies the KOReader folder. Do not share or zip the plugin folder after you create `nordvpn.conf`.
+
+To limit the risk:
+
+- Use the 30-day token. It stops working on its own.
+- Revoke the token in your Nord Account if you lose the device or share the folder by mistake.
+- Do not use this plugin on a device that other people can use.
 
 ## If something fails
 
